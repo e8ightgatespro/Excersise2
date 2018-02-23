@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioButton
+        android:id="@+id/rdbFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rbdCoworker"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginBottom="33dp"
+        android:buttonTint="Friend"
+        android:text="Friend" />
+
+    <RadioButton
+        android:id="@+id/rdbFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rdbFriend"
+        android:layout_alignBottom="@+id/rdbFriend"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:text="Family" />
+
+    <RadioButton
+        android:id="@+id/rbdCoworker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rdbFriend"
+        android:layout_alignStart="@+id/rdbFriend"
+        android:layout_centerVertical="true"
+        android:text="Co-worker" />
+
+    <RadioButton
+        android:id="@+id/rdbAcquaintance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rbdCoworker"
+        android:layout_alignBottom="@+id/rbdCoworker"
+        android:layout_alignLeft="@+id/rdbFamily"
+        android:layout_alignStart="@+id/rdbFamily"
+        android:text="Acquaintance" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rdbFamily"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:text="How is this Contact related to you" />
+</RelativeLayout>
