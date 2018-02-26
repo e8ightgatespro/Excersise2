@@ -84,6 +84,7 @@ public class ContacctActivity extends AppCompatActivity implements DatePickerDia
         EditText editPhone = (EditText) findViewById(R.id.editHome);
         EditText editCell = (EditText) findViewById(R.id.editCell);
         EditText editEmail = (EditText) findViewById(R.id.editEMail);
+        TextView textRelationship = findViewById(R.id.textRelationship);
         Button buttonChange = (Button) findViewById(R.id.btnBirthday);
         Button buttonSave = (Button) findViewById(R.id.buttonSave);
 
@@ -114,6 +115,12 @@ public class ContacctActivity extends AppCompatActivity implements DatePickerDia
         TextView birthDay = (TextView) findViewById(R.id.textBirthday);
         birthDay.setText(DateFormat.format("MM/dd/yyyy", selectedTime.getTimeInMillis()).toString());
 
+    }
+
+    @Override
+    public void didFinishRelationshipDialog(String relationship) {
+        TextView textRelationship = findViewById(R.id.textRelationship);
+        textRelationship.setText(relationship);
     }
 
     private void initChangeDateButton() {
