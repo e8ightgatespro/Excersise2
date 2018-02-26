@@ -12,7 +12,7 @@
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:layout_marginBottom="33dp"
-        android:buttonTint="Friend"
+
         android:text="Friend" />
 
     <RadioButton

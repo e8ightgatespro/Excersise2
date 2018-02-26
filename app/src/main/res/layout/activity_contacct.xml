@@ -86,16 +86,33 @@
 
             </EditText>
 
+            <Button
+                android:id="@+id/btnRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editName"
+                android:layout_alignStart="@+id/editName"
+                android:layout_below="@+id/editName"
+                android:text="Select" />
+
+            <TextView
+                android:id="@+id/textRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btnRelationship"
+                android:layout_alignBottom="@+id/btnRelationship"
+                android:layout_toEndOf="@+id/textEMail"
+                android:layout_toRightOf="@+id/textEMail"
+                android:text="Relationship Status" />
+
             <TextView
                 android:id="@+id/textAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_below="@id/editName"
+                android:layout_alignLeft="@+id/editAddress"
+                android:layout_alignStart="@+id/editAddress"
+                android:layout_below="@+id/btnRelationship"
+                android:layout_marginTop="16dp"
                 android:text="Address" />
 
             <EditText
