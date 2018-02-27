@@ -15,7 +15,7 @@ import android.text.format.DateFormat;
 import java.util.Calendar;
 
 
-public class ContacctActivity extends AppCompatActivity implements DatePickerDialog.SaveDateListener {
+public class ContacctActivity extends AppCompatActivity implements DatePickerDialog.SaveDateListener, RelationshipDialog.SaveRelationshipListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class ContacctActivity extends AppCompatActivity implements DatePickerDia
         initToggleButton();
         setForEditing(false);
         initChangeDateButton();
+        initChangeRelationshipButton();
 
     }
 
@@ -87,6 +88,7 @@ public class ContacctActivity extends AppCompatActivity implements DatePickerDia
         TextView textRelationship = findViewById(R.id.textRelationship);
         Button buttonChange = (Button) findViewById(R.id.btnBirthday);
         Button buttonSave = (Button) findViewById(R.id.buttonSave);
+        Button btnRelationship = (Button) findViewById(R.id.btnRelationship);
 
         editName.setEnabled(enabled);
         editAddress.setEnabled(enabled);
@@ -98,6 +100,7 @@ public class ContacctActivity extends AppCompatActivity implements DatePickerDia
         editEmail.setEnabled(enabled);
         buttonSave.setEnabled(enabled);
         buttonChange.setEnabled(enabled);
+        btnRelationship.setEnabled(enabled);
 
         if (enabled) {
             editName.requestFocus();
@@ -117,12 +120,27 @@ public class ContacctActivity extends AppCompatActivity implements DatePickerDia
 
     }
 
+
+
+    private void initChangeRelationshipButton() {
+        Button btnRelationship = (Button) findViewById(R.id.btnRelationship);
+        btnRelationship.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getSupportFragmentManager();
+                RelationshipDialog relationshipDialog = new RelationshipDialog();
+                relationshipDialog.show(fm,"relationship pick");
+            }
+        });
+
+
+    }
+
     @Override
-    public void didFinishRelationshipDialog(String relationship) {
+    public void didFinishRelationshipPicker(String relationship) {
         TextView textRelationship = findViewById(R.id.textRelationship);
         textRelationship.setText(relationship);
     }
-
     private void initChangeDateButton() {
         Button changeDate = (Button) findViewById(R.id.btnBirthday);
         changeDate.setOnClickListener(new View.OnClickListener() {

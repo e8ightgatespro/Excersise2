@@ -4,13 +4,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <RadioButton
+            android:id="@+id/rdbAcquaintance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:text="Acquaintance" />
+
+        <RadioButton
+            android:id="@+id/rdbFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:text="Family" />
+
+        <RadioButton
+            android:id="@+id/rdbCoworker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:text="Co-worker" />
+
+        <RadioButton
+            android:id="@+id/rdbFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="145dp"
+            android:layout_weight="1"
+
+            android:layout_gravity="center_horizontal"
+            android:text="Friend" />
+
+    </RadioGroup>
+
     <Button
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/radioGroup"
-        android:layout_toRightOf="@+id/radioGroup"
+        android:layout_toLeftOf="@+id/btnOK"
+        android:layout_toStartOf="@+id/btnOK"
         android:text="Cancel" />
 
     <Button
@@ -20,8 +65,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
         android:text="OK" />
 
     <TextView
@@ -29,55 +72,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="41dp"
         android:text="How is this Contact related to you" />
 
-    <RadioGroup
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
-
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginTop="31dp"
-        android:id="@+id/radioGroup">
-
-        <RadioButton
-            android:id="@+id/rdbAcquaintance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_weight="1"
-            android:text="Acquaintance" />
-
-        <RadioButton
-            android:id="@+id/rdbCoworker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_weight="1"
-            android:text="Co-worker" />
-
-        <RadioButton
-            android:id="@+id/rdbFamily"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_weight="1"
-            android:text="Family" />
-
-        <RadioButton
-            android:id="@+id/rdbFriend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginBottom="33dp"
-
-            android:layout_weight="1"
-            android:text="Friend" />
-    </RadioGroup>
 
 </RelativeLayout>

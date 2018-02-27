@@ -14,6 +14,8 @@ public class DatePickerDialog extends DialogFragment {
 
     public interface SaveDateListener {
         void didFinishDatePickerDialog(Calendar selectedTime);
+
+
     }
 
     public DatePickerDialog() {
@@ -21,7 +23,7 @@ public class DatePickerDialog extends DialogFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedINstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.select_date, container);
 
         getDialog().setTitle("Select Date");
